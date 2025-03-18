@@ -1,0 +1,17 @@
+# Allowlisting gitignore
+# Ignore everything
+*
+
+# But not these files...
+!/.github/**/*
+!/.gitignore
+!/.tool-versions
+
+!README.md
+!LICENSE
+
+!bin/install
+!bin/list-all
+
+# ...even if they are in subdirectories
+!*/
