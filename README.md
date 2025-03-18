@@ -1,19 +1,27 @@
-<img src="https://avatars.githubusercontent.com/u/1785912?s=96&v=4" alt="Cru logo" title="Cru" align="right" height="96" width="96"/>
+# asdf-cru-cli
+[cru-cli](https://github.com/CruGlobal/cru-cli) plugin for [asdf package manager](https://asdf-vm.com).
 
-# Cru Command Line Interface
-**Experimental** Command line tool for managing Cru application resources.
+## Install
+Ensure you have asdf [installed](https://asdf-vm.com/guide/getting-started.html) and the [GitHub CLI](https://github.com/cli/cli#installation) installed.
+Since the `cru-cli` repository is private, you will need to have the GitHub CLI authenticated with your GitHub account.
 
-## Installation
-Cru CLI can be installed using the [asdf version manager].
-```bash
-asdf plugin add cru-cli https://github.com/CruGlobal/asdf-cru-cli.git
+#### Install plugin
+```shell
+gh auth login
+asdf plugin-add cru-cli https://github.com/CruGlobal/asdf-cru-cli
 ```
 
-## Usage
-TODO: Write usage instructions
+#### Install `cru-cli` version
+```shell
+# Show all installable versions
+asdf list-all cru-cli
 
-## License
-MIT License - Copyright (c) 2025 Cru.
+# Install latest version
+asdf install cru-cli latest
 
-[asdf version manager]: https://asdf-vm.com/
-[Contributing Guide]: CONTRIBUTING.md
+# Install specific version
+asdf install cru-cli <version>
+
+# Set a version globally (on your ~/.tool-versions file)
+asdf global cru-cli latest
+```
