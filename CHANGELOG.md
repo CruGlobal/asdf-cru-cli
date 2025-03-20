@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/CruGlobal/asdf-cru-cli/compare/v1.0.0...v1.0.1) (2025-03-20)
+
+
+### Bug Fixes
+
+* Add requirements and update example commands. ([#4](https://github.com/CruGlobal/asdf-cru-cli/issues/4)) ([9eb2d8d](https://github.com/CruGlobal/asdf-cru-cli/commit/9eb2d8df7ed7ab10280f8acf1ab04957a91ee7fe))
+
 ## 1.0.0 (2025-03-18)
 
 
