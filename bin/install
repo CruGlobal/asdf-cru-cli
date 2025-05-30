@@ -17,7 +17,6 @@ install_cru_cli() {
   local -r install_path=$3
 
   local -r bin_install_path="${install_path}/bin"
-  local -r binary_path="${bin_install_path}/${app_name}"
 
   local tmp_download_dir
   if [[ -n "${TMPDIR:-}" ]]; then
@@ -31,16 +30,19 @@ install_cru_cli() {
   local -r download_path="${tmp_download_dir}/${filename}"
   gh release download "v${version}" --repo CruGlobal/cru-cli --output "${download_path}" --pattern "${filename}" --clobber
 
+  echo "Cleaning previous install"
+  rm -rf ${bin_install_path} 2>/dev/null || true
+
   echo "Creating bin directory"
   mkdir -p "${bin_install_path}"
 
-  echo "Cleaning previous binaries"
-  rm -f ${binary_path} 2>/dev/null || true
-
-  echo "Copying binary"
+  echo "Copying binary and scripts"
   tar xzf ${download_path} --directory ${tmp_download_dir}
   cp ${tmp_download_dir}/${app_name} ${bin_install_path}
-  chmod +x ${binary_path}
+  if [[ -d ${tmp_download_dir}/scripts ]]; then
+    cp ${tmp_download_dir}/scripts/* ${bin_install_path}
+  fi
+  chmod -R +x ${bin_install_path}
 
   echo "Cleaning up downloads"
   rm -f "${download_path}"
