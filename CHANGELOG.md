@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/CruGlobal/asdf-cru-cli/compare/v1.1.0...v1.2.0) (2026-07-01)
+
+
+### Features
+
+* add version.json feed for the cru update check ([#9](https://github.com/CruGlobal/asdf-cru-cli/issues/9)) ([5b56c2e](https://github.com/CruGlobal/asdf-cru-cli/commit/5b56c2e70c8e68fe976e417e579e9d93044a7262))
+
 ## [1.1.0](https://github.com/CruGlobal/asdf-cru-cli/compare/v1.0.0...v1.1.0) (2025-05-30)
 
 
