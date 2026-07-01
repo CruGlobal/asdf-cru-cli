@@ -10,6 +10,11 @@
 !README.md
 !LICENSE
 
+# Latest-version feed read by `cru`'s in-process update check
+# (CruGlobal/cru-cli internal/versioncheck); updated by cru-cli's release
+# pipeline.
+!/version.json
+
 !bin/install
 !bin/list-all
 
